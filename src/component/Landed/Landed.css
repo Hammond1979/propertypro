@@ -1,0 +1,20 @@
+.santis{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+ .Rubboss {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .boss {
+  margin-right: 22px;
+  margin-bottom: 52px;
+ }

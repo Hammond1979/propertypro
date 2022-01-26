@@ -1,0 +1,90 @@
+.nav_log {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;  */
+    padding-left: 3px;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    
+}
+
+span small{
+    display: block;
+    font-size: 11px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dashboard-child{
+    background-color: rgb(6,17,42);
+    width: 22%;
+    color: white;
+    height: 100vh;
+}
+
+.dashboard_child1 {
+    margin-top: 4rem;
+    margin-left: 2rem;
+    line-height: 3;
+}
+
+.dashboard-container {
+    display: flex;
+} 
+
+.dashboard-head {
+        color: #fff;
+        width: 78%;
+        background-color: rgb(229, 241, 241);
+    }
+
+.dashboard-head1 {
+    justify-content: space-between;
+    padding: 5rem 3rem;
+    background-color: rgb(229, 241, 241);
+}
+
+.dash-icon {
+    height: 1rem;
+}
+
+.dash-paragraph {
+    font-size: 1.5rem;
+    /* margin-left: 1rem; */
+}
+
+.dash-map {
+    height:1rem;
+    /* margin-bottom: 2rem; */
+}
+
+.dash-phone {
+    height:1rem; 
+    /* margin-bottom: rem; */
+}
+
+
+.dashboard-head1 > button {
+    font-size: 18px;
+    padding: 15px 97px;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+}
+
+.dash-body-list  {
+    color: black;
+    font-size: 1.7rem;
+    margin-left: 1.5rem;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 1rem;
+}
+
+.dash-envelop {
+    height: 1rem;
+    margin-right: 0.5rem;
+}

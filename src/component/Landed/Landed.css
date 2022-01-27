@@ -1,20 +1,18 @@
-.santis{
+.land-heading{
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
- .Rubboss {
+ .land-child {
     display: flex;
     justify-content: center;
-    width: 80%;
     flex-wrap: wrap;
     margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 52px;
  }
 
- .boss {
-  margin-right: 22px;
-  margin-bottom: 52px;
+ .Land-image{
+    margin-right: 22px;
+     margin-bottom: 52px;  
  }

@@ -24,10 +24,10 @@ const NavBar = () => {
                     <li className='list1' >
                         <Link to='/'>HOME</Link>
                     </li>
-                    <li>ABOUT</li>
-                    <li>FOR SALE</li>
-                    <li>FOR RENT</li>
-                    <li>CONTACT US</li>
+                    <li className='list1'>ABOUT</li>
+                    <li className='list1'>FOR SALE</li>
+                    <li className='list1'>FOR RENT</li>
+                    <li className='list1'>CONTACT US</li>
                     <li className='list1'>SERVICES</li>
                 </ul>
 

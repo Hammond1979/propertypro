@@ -8,9 +8,6 @@ function App() {
        <Router>
         <Routes>
           <Route path='/LandingPage' element={<LandingPage/>} />
-          {/* <Route path='/Signup' element={<SignUp/>} />
-          <Route path='/Signin' element={<SignIn />} />
-          <Route path='/Property' element={<Property />} /> */}
         </Routes>
       </Router>
     </div>

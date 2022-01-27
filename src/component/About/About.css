@@ -1,4 +1,4 @@
-.about-content {
+.about-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     margin-top: 3rem;
 }
 
-.About-container {
+.About-child {
     width: 33%;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -52,13 +52,13 @@
 
 
 @media(max-width:768px) {
-    .about-content {
+    .about-container {
     justify-content: center;
     }
     .about-text {
         width: 90%;
     }
-    .About-container {
+    .About-child {
         display: none;
     }
 

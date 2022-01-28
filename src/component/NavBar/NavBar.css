@@ -5,7 +5,7 @@
     color: #fff;
     
 }
-.list1{
+.nav_content{
     padding-right: 15px;
 }
 .navigate {
@@ -47,7 +47,7 @@ span small{
     
 }
 
-.list1{
+.nav_content{
     color: white;
     text-decoration: none;
 }
@@ -76,12 +76,6 @@ span small{
     letter-spacing: 1px;
     border-radius: 0.25rem;
 }
-
-
-.nav_name{
-    margin-left: 1.2rem;
-}
-
 
 @media (max-width: 768px) {
     .nav_list_mobile{
@@ -148,7 +142,7 @@ span small{
 
 }
 @media screen and (max-width: 990px) and (min-width: 769px) {
-    .list1 {
+    .nav_content {
         display: none;
     }
 

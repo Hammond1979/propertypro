@@ -21,14 +21,13 @@ const NavBar = () => {
 
 
                 <ul className={mobile ? "nav_list_mobile" : "nav_list"}>
-                    <li className='list1' >
+                    <li className='nav_content' >
                         <Link to='/'>HOME</Link>
                     </li>
-                    <li className='list1'>ABOUT</li>
-                    <li className='list1'>FOR SALE</li>
-                    <li className='list1'>FOR RENT</li>
-                    <li className='list1'>CONTACT US</li>
-                    <li className='list1'>SERVICES</li>
+                    <li className='nav_content'>ABOUT</li>
+                    <li className='nav_content'>PROPERTIES</li>
+                    <li className='nav_content'>CONTACT US</li>
+                    <li className='nav_content'>SERVICES</li>
                 </ul>
 
 

@@ -1,10 +1,10 @@
-.land-heading{
+.herosection-header{
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
- .land-child {
+ .heroimage-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@
     margin-bottom: 52px;
  }
 
- .Land-image{
+ .hero_image{
     margin-right: 22px;
      margin-bottom: 52px;  
  }

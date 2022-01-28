@@ -5,11 +5,11 @@ const Footer = () => {
     return (
         <>
             <div className="footer-container" >
-                <div className='footer-first-child'>
-                    <div className='footer-first-child1'>
+                <div className='footer-header'>
+                    <div className='footer-header-child'>
                         <span>Oakberry <small className='footer-logo'>real estate agency</small></span>
                     </div>
-                    <p className='footer-first-paragraph'>A small river named Duden flows<br /> by their place and supplies it with<br /> the necessary regelialia.</p>
+                    <p className='footer-header-paragraph'>A small river named Duden flows<br /> by their place and supplies it with<br /> the necessary regelialia.</p>
 
                     <div className="socialmedia">
                         <span className='socialmedia-icon'><i class="fa fa-facebook"></i></span>
@@ -19,20 +19,20 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='footer-second-child'>
+                <div className='footer-body-list'>
                     <h1 >Offers</h1>
                     
                         <ul  >
-                            <li className='unstyled'>
+                            <li className='footer_list'>
                                 <span>Properties</span>
                             </li>
-                            <li className='unstyled'>
+                            <li className='footer_list'>
                                 <span>Agents</span>
                             </li>
-                            <li className='unstyled'>
+                            <li className='footer_list'>
                                 <span>Locations</span>
                             </li>
-                            <li className='unstyled'>
+                            <li className='footer_list'>
                                 <span>Client Support</span>
                             </li>
                         </ul>
@@ -40,19 +40,19 @@ const Footer = () => {
 
                 </div>
 
-                <div className='footer-second-child'>
+                <div className='footer-body-list'>
                     <h1 >Company</h1>
                     <ul >
-                        <li className='unstyled'>
+                        <li className='footer_list'>
                             <span>Home</span>
                         </li>
-                        <li className='unstyled'>
+                        <li className='footer_list'>
                             <span>About</span>
                         </li>
-                        <li className='unstyled'>
+                        <li className='footer_list'>
                             <span>Blog</span>
                         </li>
-                        <li className='unstyled'>
+                        <li className='footer_list'>
                             <span>Contact Us</span>
                         </li>
                     </ul>
@@ -60,20 +60,20 @@ const Footer = () => {
 
                 </div>
 
-                <div className='footer-second-child'>
+                <div className='footer-body-list'>
                     <h1 >Have a Questions?</h1>
                     <ul >
-                        <li className='unstyled'>
-                            <span className='square2'><i class="icon fa fa-map marker"></i></span>
+                        <li className='footer_list'>
+                            <span className='footer-icon'><i class="icon fa fa-map marker"></i></span>
                             <span>10 Olaolu street,isolo,Lagos Nigeria.
                             </span>
                         </li>
-                        <li className='unstyled'>
-                            <span className="square2"><i class="icon fa fa-phone"></i></span>
+                        <li className='footer_list'>
+                            <span className="footer-icon"><i class="icon fa fa-phone"></i></span>
                             <span className='footer_details'>+234 807 771 6225 / 08026711306.</span>
                         </li>
-                        <li className='unstyled'>
-                            <span className="square2"><i class="icon fa fa-envelope"></i></span>
+                        <li className='footer_list'>
+                            <span className="footer-icon"><i class="icon fa fa-envelope"></i></span>
                             <span className='footer_details'>iremifranco@gmail.com</span>
                         </li>
                     </ul>

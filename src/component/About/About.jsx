@@ -4,19 +4,19 @@ import './About.css';
 const About = () => {
     return (
         <>
-            <div className='about-container'>
-                <div className='About-child'>
-                    <div className='Aboutimg'>
+            <div className='reference-container'>
+                <div className='reference-image-header'>
+                    <div className='reference_image'>
                     </div>
                 </div>
-                <div className='about-text'>
-                    <span className='Sub-about'>
+                <div className='reference-text'>
+                    <span className='reference-text-header'>
                         About Us
                     </span>
-                    <h2 className='Sub-subheading'>
+                    <h2 className='reference-text-subheading'>
                         Oakberry A Real Estate Company
                     </h2>
-                    <p className='about-paragragh'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <p className='reference-text-paragragh'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     <img src="images/about1.jpg" alt="" />
 
                 </div>

@@ -1,0 +1,114 @@
+.footer-container{
+    background-color: #06112a;
+    padding: 3rem;
+    color: rgba(255,255,255,.7);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 0rem;
+}
+
+.footer-header-child {
+    display: flex;
+    justify-content: space-between; 
+    color: rgba(255,255,255,.7);
+    font-size: 2rem;
+    margin-bottom:2rem;
+}
+
+.footer-body-list {
+    margin-bottom:2rem; 
+    
+}
+
+.footer-body-list > ul  {
+    padding-left: 0px;
+}
+
+.footer-header-paragraph{
+    margin-top: 0;
+    margin-bottom: 2.7rem;
+    font-size: 15px;
+}
+
+.footer-logo{
+    display: block;
+    font-size: 11px;
+    color:rgba(255,255,255,.7);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.socialmedia-icon {
+    color: #5ea51d;
+    margin-right: 15px; 
+}
+
+.footer-copy-right {
+    background:rgb(5,13,33) ;
+    color:rgba(255,255,255,.7);
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    padding: 3rem 0;
+}
+
+.socialmedia-icon {
+    margin-left: 0.5rem; 
+    color:white;
+    background-color: #5ea51d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.socialmedia-icon {
+    font-size: 1rem;
+}
+
+.footer-icon {
+    color:white;
+    width: 90px;
+    height: 90px;
+    font-size: 1.5rem;
+    border-radius: 90%;
+    margin-right: 2px;
+}
+.socialmedia{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.small {
+    color:rgba(255,255,255,.7);  
+}
+
+.footer_list {
+    margin-bottom: 10px;
+    color:rgba(255,255,255,.7);
+    line-height: 1.8;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 0rem;
+} 
+
+.socialmedia-icon{
+    font-size: 1.1em !important;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px)  {
+    .footer-container {
+           flex-direction: column;
+           justify-content: center;
+           font-size: 10px;
+           margin-bottom: 1rem; 
+       }
+      .footer-header{
+          font-size: 12px;
+      }
+}                                         

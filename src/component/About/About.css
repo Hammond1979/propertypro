@@ -1,0 +1,77 @@
+.reference-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+   
+    margin-top: 3rem;
+}
+
+.reference-image-header {
+    width: 33%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+.reference-text {
+    width: 60%;
+}
+
+.reference_image  {
+    background-image: url("/src/images/about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 34rem;
+    background-size: 100%;
+}
+
+.reference-text-header {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #5ea51d;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.reference-text-subheading{
+    font-size: 40px;
+    line-height: 1.4;
+    color: rgba(63, 60, 60, 0.8);
+}
+
+ .reference-text-paragragh {
+    margin-top: px;
+    margin-bottom: 1rem;
+    color:#999;
+} 
+
+.reference-text >img {
+    height: 34%;
+    width: 97%;
+}
+
+
+@media(max-width:768px) {
+    .reference-container {
+    justify-content: center;
+    }
+    .reference-text {
+        width: 90%;
+    }
+    .reference-image-header {
+        display: none;
+    }
+
+    .reference-text >img {
+        height: 32%;
+        width: 97%;
+    }
+    
+}
+
+@media screen and (max-width: 990px) and (min-width: 769px) {
+    .reference_image {
+        background-size: cover;
+    }
+
+  }

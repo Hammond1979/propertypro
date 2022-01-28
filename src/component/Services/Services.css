@@ -1,0 +1,43 @@
+.service_container {
+    text-align: center;
+    margin-top: 60px;
+    background: rgb(252, 248, 248);
+}
+
+.services {
+    padding: 0 20px;
+    text-align: center;
+    width: 25%;
+    margin-bottom: 40px;
+    
+}
+
+.service_image{
+    width: 4rem;
+    color: #24a148;
+    margin-bottom: 1.9rem;
+    filter: opacity(0.5) drop-shadow(0 0 0 #24a148);
+}
+
+.service > h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(255,255,255);
+}
+
+.services > p {
+    line-height: 1.8;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 0.8);
+}
+ .color > .heading {
+    color:rgba(0, 0, 0, 0.8) !important;
+}
+
+@media (max-width: 768px)  {
+      .service-wrapper{
+          margin-top: 1.5rem;
+          padding: 1rem 0;
+      }
+      
+} 

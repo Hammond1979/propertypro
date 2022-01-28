@@ -1,0 +1,111 @@
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    
+}
+
+.Subheading {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.Subheading2 {
+    font-size: 40px;
+    
+}
+
+.Subheading:before {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    content: '';
+    transform: translateY(-50%);
+    width: 50px;
+    height: 1px;
+    margin-top: -1px;
+    background: #24A148;
+}
+
+.Subheading:after {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    content: '';
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50px;
+    height: 1px;
+    margin-top: -1px;
+    background: #24A148;
+}
+
+/* workflow text styling */
+
+.work_number {
+    font-size: 30px;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 3;
+    position: relative;
+}
+
+.Workflow_container{
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 63px;
+    background: transparent;
+}
+
+.workflow-image {
+    position: absolute;
+    margin: 0 auto;
+    top: -50px;
+    width:150px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: 1;
+    vertical-align: middle;
+    
+}
+.Workflow_wrapper > div {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 1rem;
+
+}
+.Workflowtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.Workflowsubtitle {
+    color: white;
+}
+
+.Workflow_wrapper {
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Workflow_wrapper > div {
+    width: 20%;
+    margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+    .Workflow_wrapper > div{
+     width: 80%;
+    }
+}

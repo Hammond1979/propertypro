@@ -1,0 +1,18 @@
+.herosection-header{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+ .heroimage-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 52px;
+ }
+
+ .hero_image{
+    margin-right: 22px;
+     margin-bottom: 52px;  
+ }

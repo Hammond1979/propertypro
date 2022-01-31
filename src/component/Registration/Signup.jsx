@@ -1,10 +1,13 @@
 import React from 'react';
 import './Signup.css'
+import NavBar from '../../component/NavBar/NavBar'
+import Footer from '../../component/Footer/Footer'
 
 
 const Signup = () => {
   return <>
-            <section>
+           <NavBar />
+            <section> 
                 <div className="container">
                     <form action="" className="form">
                         <h1 className="signuptitle">Register</h1>
@@ -49,7 +52,7 @@ const Signup = () => {
                     </form>
                 </div>
             </section>
-
+        <Footer />
   </>;
 };
 

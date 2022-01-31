@@ -1,8 +1,8 @@
 import React from 'react';
 import LandingPage from "./pages/Landing-page/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Signup from './component/Signup/Signup';
+import Signup from './component/Registration/Signup';
+import SignIn from './component/Registration/SignIn';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage/>} />
           <Route path='/Signup' element={<Signup />} />
+          <Route path='/SignIn' element={<SignIn />} />
         </Routes>
       </Router>
       

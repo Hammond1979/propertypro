@@ -1,55 +1,43 @@
 import React from 'react';
 import './Signup.css'
-import NavBar from '../../component/NavBar/NavBar'
-import Footer from '../../component/Footer/Footer'
+import NavBar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
 
+
+const registrationBody =[
+{name:'Name'},
+{name:'Username'},
+{name:'Email'},
+{name:'Password'},
+{name:'Confirm Password'}
+]
 
 const Signup = () => {
   return <>
            <NavBar />
-            <section> 
-                <div className="container">
-                    <form action="" className="form">
+            <section className='registrationFolder'> 
+                <div className="registrationBody">
+                    <form action="" className="registrationForm">
                         <h1 className="signuptitle">Register</h1>
-
-                        <div className="form-group ">
-                            <label for="" className="label">Name</label>
-                            <input type="text" className="input" placeholder="" />
-
+                      
+                       <div className="formGroup">
+                            <label for="" className="label">{detail.name}</label>
                         </div>
-
-                        <div className="form-group">
-                            <label for="" className="label">Username</label>
-                            <input type="text" class="input" placeholder="" />
-
-                        </div>
-
-                        <div className="form-group">
-                            <label for="Email" className="label">Email</label>
-                            <input type="Email" class="input" placeholder="" />
-
-                        </div>
-
-                        <div className="form-group">
-                            <label for="Password" className="label">Password</label>
-                            <input type="Password" className="input" placeholder="" />
-
-                        </div>
-
-                        <div className="form-group">
-                            <label for="Password" className="label">Confirm Password</label>
-                            <input type="Password" className="input" placeholder="" />
-                        </div>
-                        <div className="form-group">
+                        
+                        <div className="formGroup">
                             <label for="date" className="label">Birthday</label>
                             <input type="date" class="input" placeholder="a" min="2003-01-01" />
 
                         </div>
-                        <div className='Agent-details'>
-                        <span ><a href="/Signin" className="Agent">Already An Agent? Signin</a></span>
+                        <div className='agentSignin'>
+                        <span ><Link to="/sign-in" className="agent">Already An Agent? Signin</Link></span>
                             <input type="submit" class="submitBtn" value="Sign up" />
                         </div>
                     </form>
+
+                    {registrationBody.map((detail) =>
+                     <label for="" className="label">{detail.name}</label>
+                    )}
                 </div>
             </section>
         <Footer />

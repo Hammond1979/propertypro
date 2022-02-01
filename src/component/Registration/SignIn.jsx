@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
-import './SignIn.css';
-import NavBar from '../../component/NavBar/NavBar'
-import Footer from '../../component/Footer/Footer'
+import React from 'react';
+import './Sign-in.css';
+import NavBar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
 
 
 const SignIn = () => {
-    const [mobile, setMobile] = useState(false)
   return <>
            <NavBar />
-           <section>
-                <div className='container'>
-                    <form action="" className="form">
-                        <div className='form-group'>
+           <section className='registrationFolder'>
+                <div className='registrationBody'>
+                    <form action="" className="registrationForm">
+                        <div className='formGroup'>
                             <label For="Name">Username</label>
                             <input type="text" id='username' name='name' />
                         </div>
 
-                        <div className='form-group'>
+                        <div className='formGroup'>
                             <label For="Password">Password</label>
                             <input type="Password" id='name' name='Password' />
                         </div>
@@ -27,9 +26,9 @@ const SignIn = () => {
                             <input type="submit" class="SigninsubmitBtn" value="Sign in" />
                         </div>
 
-                        <div class="signinsubmitBtn">
-                            <label for="" className=""><a href="" className='signRecovery'>Lost your password? Click here to recover.</a></label>
-                            <label for="" className=""><span class="recover"> </span><a href="/Signup" className='signRecovery'>Dont have an account? Register Now.</a></label>
+                        <div class="submitBtn">
+                            <label for="" className=""><Link to="" className='signRecovery'>Lost your password? Click here to recover.</Link></label>
+                            <label for="" className=""><span class="recover"> </span><Link to="/sign-up" className='signRecovery'>Dont have an account? Register Now.</Link></label>
                         </div>
                     </form>
                 </div>

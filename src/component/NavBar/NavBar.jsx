@@ -32,7 +32,7 @@ const NavBar = () => {
 
 
                 <div className={mobile ? "agent-wrapper_mobile" : "agent-wrapper"}>
-                    <Link className='submit' to='/Signup'>Submit a property</Link>
+                    <Link className='submit' to='/sign-up'>Submit a property</Link>
                 </div>
 
             </nav>

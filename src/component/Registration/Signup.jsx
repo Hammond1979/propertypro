@@ -51,30 +51,6 @@ const Signup = () => {
                 </form>
             </div>
         </section>
-        {/* <section className='registrationWrapper'>
-
-            <div className="registrationBody">
-                {registrationBody.map((detail) =>
-                    <form action="" className="registrationForm">
-                        <h1 className="signuptitle">Register</h1>
-
-                        <div className="formGroup">
-                            <label htmlfor="" className="label">{detail.name}</label>
-                        </div>
-
-                        <div className="formGroup">
-                            <label htmlfor="date" className="label">Birthday</label>
-                            <input type="date" class="input" placeholder="" min="2003-01-01" />
-
-                        </div>
-                        <div className='agentSignin'>
-                            <span ><Link to="/sign-in" className="agentDetail">{detail.access}</Link></span>
-                            <input type="submit" class="submitBtn" value="Signup" />
-                        </div>
-                    </form>
-                )}
-            </div>
-        </section> */}
         <Footer />
     </>;
 };

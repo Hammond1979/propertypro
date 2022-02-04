@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer'
 import Input from './Input';
 
 
-const SignIn = () => {
+const Signin = () => {
   return <>
            <NavBar />
            <section className='registrationWrapper'>
@@ -20,4 +20,4 @@ const SignIn = () => {
   </>;
 };
 
-export default SignIn;
+export default Signin;

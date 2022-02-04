@@ -40,9 +40,12 @@ const Signup = () => {
                         <Input placeholder='Birthday' htmlFor="date" name='date' type='date' min="2003-01-01"/>
                     </div>
                     <div class="signinsubmitBtn">
-                            <input type="checkbox" id="Remember" name="Remember" value="Remember" />
-                            <label htmlfor="" class="Remember"> Remember Me</label>
-                            <input type="submit" class="SigninsubmitBtn" value="Sign in" />
+                    <span>
+                    <Link to="/sign-in" >
+                            Already An Agent? 
+                            </Link>
+                    </span>
+                           <input type="submit" class="signinsubBtn" value="Sign in" />
                         </div>
                     <div className='agentSignin'>
                             <span ><Link to="/sign-in" className="agentDetail">Already An Agent? Signin</Link></span>

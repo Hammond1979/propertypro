@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './component/Registration/Signup';
 import Signin from './component/Registration/Signin';
 import Input from './component/Registration/Input';
+import Property from './component/Properties/Property';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/' element={<LandingPage />} />
           <Route path='/sign-up' element={<Signup />} />
           <Route path='/sign-in ' element={<Signin />} />
+          <Route path='/property' element={<Property />} />
         </Routes>
       </Router>
     </div>

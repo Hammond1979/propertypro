@@ -72,11 +72,10 @@
 
 .footer-icon {
     color:white;
-    width: 90px;
-    height: 90px;
-    font-size: 1.5rem;
-    border-radius: 90%;
-    margin-right: 2px;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 50%;
 }
 .socialmedia{
     display: flex;

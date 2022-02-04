@@ -25,7 +25,7 @@ const Signin = () => {
                     <div className="signinsubmitBtn">
                         <input type="checkbox" name="Remember" value="Remember" />
                         <label htmlfor=""> Remember Me</label>
-                        <input type="submit" className="SigninsubmitBtn" value="Sign in" />
+                        <button type="submit" className="signinBtn">Sign in</button> 
                     </div>
 
                     <div class="signinsubmitBtn">

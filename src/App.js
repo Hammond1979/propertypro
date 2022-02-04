@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/sign-up' element={<Signup />} />
-          <Route path='/sign-in ' element={<Signin />} />
+          <Route path='/sign-in' element={<Signin />} />
           <Route path='/property' element={<Property />} />
         </Routes>
       </Router>

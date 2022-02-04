@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBar';
 import './Property.css';
 
 const Propertydata = [
-    { image: "images/xwork6.jpg", price:'#30,000,000', name: "John Dorf", text: "2 weeks ago" ,property:'Hammond Loft Property', location:'Victoria Island', sale:'sale', bed:'3bed', bath:'3', square:'1,878 sqft'},
+    { image: "images/xwork6.jpg", price:'#30,000,000', name: "John Dorf", text: "2 weeks ago" ,property:'Hammond Loft Property', location:'Victoria Island', sale:'sale', bed:'3bed', bath:'3', square:'1,878 sqft',},
 
     { image: "images/xwork2.jpg", price:'#30,000,000', name: "John Dorf", text: "2 weeks ago" ,property:'Hammond Loft Property', location:'Victoria Island', sale:'sale', bed:'3bed', bath:'3', square:'1,878 sqft'},
 
@@ -43,31 +43,31 @@ const Property = () => {
     return <>
         <NavBar />
         <div className='propertyWrapper'>
-            {Propertydata.map((proper) =>
+            {Propertydata.map((eachProperty) =>
                 <div className='propertyCard'>
                     <Link to="#" className='propertycardDetails'>
-                        <img src={proper.image} className='img-property' />
+                        <img src={eachProperty.image} className='img-property' />
                         <p className='propertyPrice'>
-                            {proper.price}
+                            {eachProperty.price}
                         </p>
                     </Link>
                     <div className='propertyListteam'>
                         <img src="images/male.jpg" className='propertyImage' />
-                        <h3 className='propertyListNname'>{proper.name}</h3>
-                        <span className='text-right'>{proper.text}
+                        <h3 className='propertyListNname'>{eachProperty.name}</h3>
+                        <span className='text-right'>{eachProperty.text}
                         </span>
                     </div>
 
                     <h3 className='propertyName'>
-                        {proper.property}
+                        {eachProperty.property}
                     </h3>
-                    <span class="propertyLocation"> {proper.location}
-                        <span className='propertySale'>{proper.sale}</span>
+                    <span class="propertyLocation"> {eachProperty.location}
+                        <span className='propertySale'>{eachProperty.sale}</span>
                     </span>
                     <ul className='propertyIcon'>
-                        <li><span><img src="images/double-bed.png" /></span>{proper.bed}</li>
-                        <li><span><img src="images/bathtub.png" /></span>{proper.bath}</li>
-                        <li><span><img src="images/blueprint.png" /></span>{proper.square}</li>
+                        <li><span><img src="images/double-bed.png" /></span>{eachProperty.bed}</li>
+                        <li><span><img src="images/bathtub.png" /></span>{eachProperty.bath}</li>
+                        <li><span><img src="images/blueprint.png" /></span>{eachProperty.square}</li>
                     </ul>
 
                 </div>

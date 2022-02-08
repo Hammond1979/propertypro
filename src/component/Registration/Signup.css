@@ -40,7 +40,7 @@
       border: 0.0625rem solid #5ea51d;
   }
  
-  .signinsubmitBtn {
+  .signinsubBtn {
     color: #000;
   }
 
@@ -65,11 +65,9 @@
   margin-top: 1rem;
 }
 
-.agentSignin {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
+.agentDetail{
+  color: #000000;
+} 
 
 .submitBtn {
   font-size: 0.875rem;

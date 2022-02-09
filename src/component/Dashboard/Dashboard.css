@@ -1,90 +1,86 @@
-.nav_log {
+.dashboardLogo {
     display: flex;
     align-items: center;
-    /* justify-content: space-between;  */
-    padding-left: 3px;
-    color: white;
+    padding-left: 0.1875rem;
+    color: #fff;
     font-size: 1.5rem;
     margin-left: 1rem;
     
 }
 
-span small{
+.dashboardSmalllogo{
     display: block;
-    font-size: 11px;
-    color: white;
+    font-size: 0.6875rem;
+    color: #fff;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.dashboard-child{
-    background-color: rgb(6,17,42);
+.dashboardHeading{
+    background-color: #0a0a33;
     width: 22%;
-    color: white;
+    color: #fff;
     height: 100vh;
 }
 
-.dashboard_child1 {
+.dashboardTablecontent {
     margin-top: 4rem;
     margin-left: 2rem;
     line-height: 3;
 }
 
-.dashboard-container {
+.dashboardWrapper {
     display: flex;
 } 
 
-.dashboard-head {
+.dashboardContent {
         color: #fff;
         width: 78%;
-        background-color: rgb(229, 241, 241);
+        background-color: #fff;
     }
 
-.dashboard-head1 {
+.dashboardSubcontent {
     justify-content: space-between;
     padding: 5rem 3rem;
-    background-color: rgb(229, 241, 241);
+    background-color: rgb(187, 182, 182);
 }
 
-.dash-icon {
+.dashboardBodyicon {
     height: 1rem;
 }
 
-.dash-paragraph {
+.dashboardBodyparagraph {
     font-size: 1.5rem;
-    /* margin-left: 1rem; */
 }
 
-.dash-map {
+.dashboardBodymap{
     height:1rem;
-    /* margin-bottom: 2rem; */
 }
 
-.dash-phone {
+.dashboardBodyphone {
     height:1rem; 
-    /* margin-bottom: rem; */
 }
 
 
-.dashboard-head1 > button {
-    font-size: 18px;
-    padding: 15px 97px;
+.dashboardSubcontent > button {
+    font-size: 1.125rem;
+    padding: 0.9375rem 6.0625rem;
     text-align: center;
     border-radius: 0.5rem;
     margin-right: 2rem;
 }
 
-.dash-body-list  {
-    color: black;
+.dashboardBody  {
+    color: #000;
     font-size: 1.7rem;
     margin-left: 1.5rem;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 40px;
     margin-bottom: 1rem;
 }
 
-.dash-envelop {
+.dashboardBodyenvelop {
     height: 1rem;
     margin-right: 0.5rem;
 }

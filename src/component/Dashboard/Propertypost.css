@@ -1,0 +1,107 @@
+.postProperty {
+    padding: 15px; 
+    background-color: rgb(214, 213, 213);
+    width: 78%;
+    height: 100%;
+}
+
+.propertypostWrapper{
+    display: flex;
+}
+
+.propertyForm {
+    display: block;
+}
+
+.propertyInput  {
+    width: 85%;
+    font-size: 20px;
+    color: rgb(126, 121, 121);
+}
+
+.properpostLabel1 {
+    font-size: 1.2rem;
+}
+
+.properpostLabel2{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.propertyBody{
+    margin-top: 2rem;
+    font-size: 1.2rem;   
+}
+
+.propertyText{
+    width: 90%;
+    font-size: 20px;
+    color: rgb(126, 121, 121);
+}
+
+.propertyText2{
+    width: 90%;
+    font-size: 20px;
+    color: rgb(126, 121, 121);
+}
+
+.properpostLabel3{
+    display: flex;
+    align-items: baseline;
+}
+
+.properpostLabel3{
+    display: flex;
+    align-items: flex-end;
+}
+
+.propertyText1{
+    width: 90%;
+    font-size: 20px;
+    color: rgb(126, 121, 121);
+}
+
+.propertyTextarea{
+    width:80%;
+}
+
+.propertyButton {
+    text-align: right;
+    font-size: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: auto;
+}
+
+.propertyButton > button {
+    font-size: 20px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 1rem;
+}
+
+.propertyUploader{
+    margin-top: 1rem;
+}
+.propertySubbody {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.properpostLabel2{
+    flex-direction: row;
+}
+
+.propertyCheckboxes {
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
+}
+
+@media (max-width: 768px) {
+    .dashboard-child{
+     display:none;
+    }
+    .postProperty{
+        width: 100%;
+    }
+}

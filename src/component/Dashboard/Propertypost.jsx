@@ -6,9 +6,9 @@ const Propertypost = () => {
     return <>
         <div className='propertypostWrapper'>
             <div className='dashboardHeading'>
-                <div className='dashboardLogo'>
+                <div className='dashboardSubheading'>
                     <span className='dashboardIcon'><i class="fa fa-home"></i></span>
-                    <span>Oakberry <small className='dashboardSmalllogo'>real estate agency</small></span>
+                    <span>Oakberry <small className='dashboardLogo'>real estate agency</small></span>
                 </div>
                 <div className='dashboardTablecontent'>
                     <Link to="/dashboard"> <h3>Dashboard</h3></Link>
@@ -21,7 +21,7 @@ const Propertypost = () => {
                 <h1>Post a property</h1>
                 <p>Put your property in front of millions of home-seekers</p>
                 <form action="propertyForm">
-                    <label className='properpostLabel'>Title</label>
+                    <label className='propertypostLabel'>Title</label>
                     <div>
                         <input type="text" className='propertyInput ' placeholder='e.g Newly Built 4 Bedroom Duplex in a Serene Neighbourhood ' />
                     </div>
@@ -29,7 +29,7 @@ const Propertypost = () => {
                         <div className="propertySubbody">
 
                             <div>
-                                <label className='properpostLabel2'>Purpose</label>
+                                <label className='propertypostLabel2'>Purpose</label>
                                 <select name="mode" className="propertyText"><option value>--select--</option>
                                     <option value="rent">For Rent</option>
                                     <option value="sale">For Sale</option>
@@ -38,7 +38,7 @@ const Propertypost = () => {
                             </div>
 
                             <div>
-                                <label className='properpostLabel2'>Type of property</label>
+                                <label className='propertypostLabel2'>Type of property</label>
                                 <select name="mode" className="propertyText" required='required'>
                                     <option value>--select--</option>
                                     <option value="32">Co-working space</option>
@@ -50,7 +50,7 @@ const Propertypost = () => {
                             </div>
 
                             <div>
-                                <label className='properpostLabel2'>Sub type of property</label>
+                                <label className='propertypostLabel2'>Sub type of property</label>
                                 <select name="mode" className="propertyText" required='required'>
                                     <option value>--select--</option>
                                     <option value="32">Co-working space</option>
@@ -61,8 +61,8 @@ const Propertypost = () => {
                                 </select>
                             </div>
                         </div>
-                        <div className='properpostLabel3'><div>
-                            <label className='properpostLabel2'>Bedrooms</label>
+                        <div className='propertypostLabel3'><div>
+                            <label className='propertypostLabel2'>Bedrooms</label>
                             <select name="mode" className="propertyText1" required='required'>
                                 <option value>--select--</option>
                                 <option value="1">1</option>
@@ -79,7 +79,7 @@ const Propertypost = () => {
                         </div>
 
                             <div>
-                                <label className='properpostLabel2'>Bathrooms</label>
+                                <label className='propertypostLabel2'>Bathrooms</label>
                                 <select name="mode" className="propertyText1" required='required'>
                                     <option value>--select--</option>
                                     <option value="1">1</option>
@@ -96,7 +96,7 @@ const Propertypost = () => {
                             </div>
 
                             <div>
-                                <label className='properpostLabel2'>Toilets</label>
+                                <label className='propertypostLabel2'>Toilets</label>
                                 <select name="mode" className="propertyText1" required='required'>
                                     <option value>--select--</option>
                                     <option value="1">1</option>
@@ -113,7 +113,7 @@ const Propertypost = () => {
                             </div>
 
                             <div>
-                                <label className='properpostLabel2'>Size</label>
+                                <label className='propertypostLabel2'>Size</label>
                                 <input type="text" className='propertyText1' placeholder='e.g. 1 sqm' />
                             </div>
                         </div>
@@ -126,8 +126,8 @@ const Propertypost = () => {
                             <label className="check-container">Newly Built</label>
                             <input type="checkbox" className='check' />
                         </div>
-                        <div className='properpostLabel3'><div>
-                            <label className='properpostLabel2'>State</label>
+                        <div className='propertypostLabel3'><div>
+                            <label className='propertypostLabel2'>State</label>
                             <select name="mode" className="propertyText2" required='required'>
                                 <option value>Choose State</option>
                                 <option value="1">Lagos</option>
@@ -138,13 +138,13 @@ const Propertypost = () => {
                             </select>
                         </div>
                             <div>
-                                <label className='properpostLabel2'>Locality</label>
+                                <label className='propertypostLabel2'>Locality</label>
                                 <select name="mode" className="propertyText2" required='required'>
                                     <option value>Choose Locality</option>
                                 </select>
                             </div>
                             <div>
-                                <label className='properpostLabel2'>Street / Estate / Neighbourhood</label>
+                                <label className='propertypostLabel2'>Street / Estate / Neighbourhood</label>
                                 <select name="mode" className="propertyText2" required='required'>
                                     <option value>--select--</option>
                                     <option value="32">Co-working space</option>
@@ -160,7 +160,7 @@ const Propertypost = () => {
 
                         <div>
 
-                            <label className='properpostLabel2'>Description</label>
+                            <label className='propertypostLabel2'>Description</label>
                             <div>
                                 <textarea id="desc" className='propertyTextarea' placeholder='Describe your property' cols="30" rows="10"></textarea>
                             </div>

@@ -19,11 +19,11 @@
     color: rgb(126, 121, 121);
 }
 
-.properpostLabel1 {
+.propertypostLabel1 {
     font-size: 1.2rem;
 }
 
-.properpostLabel2{
+.propertypostLabel2{
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -45,12 +45,12 @@
     color: rgb(126, 121, 121);
 }
 
-.properpostLabel3{
+.propertypostLabel3{
     display: flex;
     align-items: baseline;
 }
 
-.properpostLabel3{
+.propertypostLabel3{
     display: flex;
     align-items: flex-end;
 }
@@ -88,7 +88,7 @@
     margin-bottom: 1rem;
 }
 
-.properpostLabel2{
+.propertypostLabel2{
     flex-direction: row;
 }
 

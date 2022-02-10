@@ -7,9 +7,9 @@ const Dashboard = () => {
   return <>
         <div className='dashboardWrapper'>
                 <div className='dashboardHeading'>
-                    <div className='dashboardLogo'>
+                    <div className='dashboardSubheading'>
                         <span className='dashboardIcon'><i class="fa fa-home"></i></span>
-                        <span>Oakberry <small className='dashboardSmalllogo'>real estate agency</small></span>
+                        <span>Oakberry <small className='dashboardLogo'>real estate agency</small></span>
                     </div>
                     <div className='dashboardTablecontent'>
                         <Link to=""> <h3>Dashboard</h3></Link>
@@ -27,13 +27,13 @@ const Dashboard = () => {
                     <div className='dashboardBody'>
                         <h3>Personal Details</h3>
                         <div className=''>
-                            <p className='dashboardBodyparagraph'><img src="/images/contact.png" alt="" className='dashboardBodyicon' /> Frank Irems</p>
-                            <img src="/images/map.png" alt="" className='dashboardBodymap' />
+                            <p className='dashboardBodyparagraph'><img src="/images/contact.png" className='dashboardBodyicon' /> Frank Irems</p>
+                            <img src="/images/map.png" className='dashboardBodymap' />
                             <div>
-                                <img src="/images/phone.png" alt="" className='dashboardBodyphone' /><span>08138929686</span>
+                                <img src="/images/phone.png"  className='dashboardBodyphone' /><span>08138929686</span>
                             </div>
                             <div>
-                            <img src="/images/envelop.png" alt="" className='dashboardBodyenvelop' />
+                            <img src="/images/envelop.png" className='dashboardBodyenvelop' />
                             <span>frankirems@gmail.com</span>
                             </div>
                             

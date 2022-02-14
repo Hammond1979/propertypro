@@ -12,10 +12,10 @@ const Dashboard = () => {
                         <span>Oakberry <small className='dashboardLogo'>real estate agency</small></span>
                     </div>
                     <div className='dashboardTablecontent'>
-                        <Link to=""> <h3>Dashboard</h3></Link>
+                         <h3>Dashboard</h3>
                         <Link to="/propertypost"><h3>Post A Property</h3></Link>
-                        <Link to=""><h3>All Properties</h3></Link>
-                        <Link to=""><h3>Sign Out</h3></Link>
+                        <h3>All Properties</h3>
+                        <h3>Sign Out</h3>
                     </div>
                 </div>
                 <div className='dashboardContent'>

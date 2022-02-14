@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Propertypost.css';
+import Selectoption from './Selectoption';
+
 
 const Propertypost = () => {
     return <>
@@ -20,14 +22,13 @@ const Propertypost = () => {
             <div className='postProperty'>
                 <h1>Post a property</h1>
                 <p>Put your property in front of millions of home-seekers</p>
-                <form action="propertyForm">
+                <form className="propertyForm">
                     <label className='propertypostLabel'>Title</label>
                     <div>
                         <input type="text" className='propertyInput ' placeholder='e.g Newly Built 4 Bedroom Duplex in a Serene Neighbourhood ' />
                     </div>
                     <div className='propertyBody'>
                         <div className="propertySubbody">
-
                             <div>
                                 <label className='propertypostLabel2'>Purpose</label>
                                 <select name="mode" className="propertyText"><option value>--select--</option>
@@ -36,85 +37,24 @@ const Propertypost = () => {
                                     <option value="shortlet">Shortlet</option>
                                 </select>
                             </div>
-
-                            <div>
-                                <label className='propertypostLabel2'>Type of property</label>
-                                <select name="mode" className="propertyText" required='required'>
-                                    <option value>--select--</option>
-                                    <option value="32">Co-working space</option>
-                                    <option value="30">Commercial Property</option>
-                                    <option value="13">House</option>
-                                    <option value="24">Land</option>
-                                    <option value="shortlet">Shortlet</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label className='propertypostLabel2'>Sub type of property</label>
-                                <select name="mode" className="propertyText" required='required'>
-                                    <option value>--select--</option>
-                                    <option value="32">Co-working space</option>
-                                    <option value="30">Commercial Property</option>
-                                    <option value="13">House</option>
-                                    <option value="24">Land</option>
-                                    <option value="shortlet">Shortlet</option>
-                                </select>
-                            </div>
+                            <Selectoption labelName="Type of property" data={["--select--", "Co-working space", "Commercial Property", "House", "Land", "Shortlet"]} />
+                            <Selectoption labelName="Sub type of property" data={["--select--", "Co-working space", "Commercial Property", "House", "Land", "shortlet"]} />
                         </div>
-                        <div className='propertypostLabel3'><div>
-                            <label className='propertypostLabel2'>Bedrooms</label>
-                            <select name="mode" className="propertyText1" required='required'>
-                                <option value>--select--</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10+</option>
-                            </select>
-                        </div>
-
+                        <div className='propertypostLabel3'>
                             <div>
-                                <label className='propertypostLabel2'>Bathrooms</label>
-                                <select name="mode" className="propertyText1" required='required'>
-                                    <option value>--select--</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10+</option>
-                                </select>
+                                <Selectoption labelName="Bedrooms" data={["--select--", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"]} />
                             </div>
 
                             <div>
-                                <label className='propertypostLabel2'>Toilets</label>
-                                <select name="mode" className="propertyText1" required='required'>
-                                    <option value>--select--</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10+</option>
-                                </select>
+                                <Selectoption labelName="Bathrooms" data={["--select--", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"]} />
                             </div>
 
                             <div>
-                                <label className='propertypostLabel2'>Size</label>
-                                <input type="text" className='propertyText1' placeholder='e.g. 1 sqm' />
+                                <Selectoption labelName="Bedrooms" data={["--select--", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"]} />
+                            </div>
+
+                            <div>
+                                <Selectoption labelName="Size" data={["e.g. 1 sqm"]} />
                             </div>
                         </div>
 
@@ -127,39 +67,16 @@ const Propertypost = () => {
                             <input type="checkbox" className='check' />
                         </div>
                         <div className='propertypostLabel3'><div>
-                            <label className='propertypostLabel2'>State</label>
-                            <select name="mode" className="propertyText2" required='required'>
-                                <option value>Choose State</option>
-                                <option value="1">Lagos</option>
-                                <option value="2">Abuja</option>
-                                <option value="3">Porthacourt</option>
-                                <option value="4">Cross River</option>
-                                <option value="5">Kaduna</option>
-                            </select>
+                            <Selectoption labelName="State" data={["Choose State", "Lagos", "Abuja", "Porthacourt", "Cross River", "Kaduna"]} />
                         </div>
                             <div>
-                                <label className='propertypostLabel2'>Locality</label>
-                                <select name="mode" className="propertyText2" required='required'>
-                                    <option value>Choose Locality</option>
-                                </select>
+                                <Selectoption labelName="Locality" data={["Choose Locality"]} />
                             </div>
                             <div>
-                                <label className='propertypostLabel2'>Street / Estate / Neighbourhood</label>
-                                <select name="mode" className="propertyText2" required='required'>
-                                    <option value>--select--</option>
-                                    <option value="32">Co-working space</option>
-                                    <option value="30">Commercial Property</option>
-                                    <option value="13">House</option>
-                                    <option value="24">Land</option>
-                                </select>
+                                <Selectoption labelName="Street / Estate / Neighbourhood" data={["--select--", "Co-working space", "Commercial Property", "House", "Land"]} />
                             </div>
                         </div>
-
-
-
-
                         <div>
-
                             <label className='propertypostLabel2'>Description</label>
                             <div>
                                 <textarea id="desc" className='propertyTextarea' placeholder='Describe your property' cols="30" rows="10"></textarea>

@@ -21,19 +21,18 @@ const NavBar = () => {
 
 
                 <ul className={mobile ? "nav_list_mobile" : "nav_list"}>
-                    <li className='list1' >
+                    <li className='nav_content' >
                         <Link to='/'>HOME</Link>
                     </li>
-                    <li>ABOUT</li>
-                    <li>FOR SALE</li>
-                    <li>FOR RENT</li>
-                    <li>CONTACT US</li>
-                    <li className='list1'>SERVICES</li>
+                    <li className='nav_content'>ABOUT</li>
+                    <li className='nav_content'><Link to ='/property'>PROPERTIES</Link></li>
+                    <li className='nav_content'>CONTACT US</li>
+                    <li className='nav_content'>SERVICES</li>
                 </ul>
 
 
                 <div className={mobile ? "agent-wrapper_mobile" : "agent-wrapper"}>
-                    <Link className='submit' to='/Signup'>Submit a property</Link>
+                    <Link className='submit' to='/sign-up'>Submit a property</Link>
                 </div>
 
             </nav>

@@ -1,4 +1,4 @@
-.footer-section{
+.footer-container{
     background-color: #06112a;
     padding: 3rem;
     color: rgba(255,255,255,.7);
@@ -8,7 +8,7 @@
     margin-top: 0rem;
 }
 
-.footer1 {
+.footer-header-child {
     display: flex;
     justify-content: space-between; 
     color: rgba(255,255,255,.7);
@@ -16,21 +16,22 @@
     margin-bottom:2rem;
 }
 
-.footer2 > h1 {
+.footer-body-list {
     margin-bottom:2rem; 
+    
 }
 
-.footer2 >ul {
+.footer-body-list > ul  {
     padding-left: 0px;
 }
 
-p {
+.footer-header-paragraph{
     margin-top: 0;
     margin-bottom: 2.7rem;
     font-size: 15px;
 }
 
-span small{
+.footer-logo{
     display: block;
     font-size: 11px;
     color:rgba(255,255,255,.7);
@@ -38,12 +39,12 @@ span small{
     text-transform: uppercase;
 }
 
-.square2 {
+.socialmedia-icon {
     color: #5ea51d;
     margin-right: 15px; 
 }
 
-.right {
+.footer-copy-right {
     background:rgb(5,13,33) ;
     color:rgba(255,255,255,.7);
     display: flex;
@@ -52,7 +53,7 @@ span small{
     padding: 3rem 0;
 }
 
-.square1 {
+.socialmedia-icon {
     margin-left: 0.5rem; 
     color:white;
     background-color: #5ea51d;
@@ -63,28 +64,29 @@ span small{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
 }
-.square1 > i {
+.socialmedia-icon {
     font-size: 1rem;
 }
 
-.square {
+.footer-icon {
     color:white;
-    background-color: #5ea51d;
-    width: 90px;
-    height: 90px;
-    font-size: 1.5rem;
-    border-radius: 90%;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 50%;
 }
-.Socialmedia{
+.socialmedia{
     display: flex;
+    justify-content: flex-start;
 }
 
 .small {
     color:rgba(255,255,255,.7);  
 }
 
-.unstyled {
+.footer_list {
     margin-bottom: 10px;
     color:rgba(255,255,255,.7);
     line-height: 1.8;
@@ -93,23 +95,19 @@ span small{
     padding-left: 0rem;
 } 
 
-.icon {
+.socialmedia-icon{
     font-size: 1.1em !important;
     margin-bottom: 15px;
 }
 
 @media (max-width: 768px)  {
-    .footer-section {
+    .footer-container {
            flex-direction: column;
            justify-content: center;
            font-size: 10px;
+           margin-bottom: 1rem; 
        }
-      .footer4 {
+      .footer-header{
           font-size: 12px;
-      }
-      
-      .footer-section > div {
-          margin-bottom: 1rem;
-          
       }
 }                                         

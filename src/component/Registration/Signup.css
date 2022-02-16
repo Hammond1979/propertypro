@@ -1,0 +1,82 @@
+.registrationForm {
+    background-color: #fff;
+    color: #000000;
+    width: 25rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem; 
+  }
+
+  .registrationWrapper{
+      height: 100vh;
+      width: 100%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .registrationBody{
+      width: 90%;
+      max-width: 31.25rem;
+      margin: 0 auto;
+      padding: 1.25rem;
+      box-shadow: 0rem 0rem 1.25rem #00000010;
+      border-radius:  0.5rem;
+      margin-bottom: 1.25rem;
+  }
+
+  .formGroup {
+      width: 100%;
+      margin-top: 1.25rem;
+      font-size: 1.25rem;
+      color: #000;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+      width: 100%;
+      padding: 0.3125rem;
+      font-size: 1.125rem;
+      border: 0.0625rem solid #5ea51d;
+  }
+ 
+  .signinsubBtn {
+    color: #000;
+  }
+
+  .signuptitle{
+    color: #000;
+  }
+
+  .submitBtn{
+      width: 74%;
+      border: none;
+      outline: none;
+      padding:  1.25rem;
+      font-size:  1.5rem;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      background-color: #5ea51d;
+  }
+
+.signinsubmitBtn{
+  color: #000000;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.agentDetail{
+  color: #000000;
+} 
+
+.submitBtn {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 769px) and (min-width: 360px) {
+    .registrationForm {
+      width: 100%;
+    }
+}
+
+

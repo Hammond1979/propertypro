@@ -13,7 +13,7 @@ const Dashboard = () => {
                     </div>
                     <div className='dashboardTablecontent'>
                          <h3>Dashboard</h3>
-                        <Link to="/propertypost"><h3>Post A Property</h3></Link>
+                        <Link to='/propertypost'><h3>Post A Property</h3></Link>
                         <h3>All Properties</h3>
                         <h3>Sign Out</h3>
                     </div>
@@ -28,12 +28,12 @@ const Dashboard = () => {
                         <h3>Personal Details</h3>
                         <div className=''>
                             <p className='dashboardBodyparagraph'><img src="/images/contact.png" className='dashboardBodyicon' /> Frank Irems</p>
-                            <img src="/images/map.png" className='dashboardBodymap' />
+                            <img src="/images/map.png" className='dashboardBodymap'/>
                             <div>
-                                <img src="/images/phone.png"  className='dashboardBodyphone' /><span>08138929686</span>
+                                <img src="/images/phone.png"  className='dashboardBodyphone'/><span>08138929686</span>
                             </div>
                             <div>
-                            <img src="/images/envelop.png" className='dashboardBodyenvelop' />
+                            <img src="/images/envelop.png" className='dashboardBodyenvelop'/>
                             <span>frankirems@gmail.com</span>
                             </div>
                             

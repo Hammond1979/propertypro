@@ -1,5 +1,4 @@
 import React from 'react';
-import LandingPage from "./pages/Landing-page/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './component/Registration/Signup';
 import Signin from './component/Registration/Signin';
@@ -9,7 +8,6 @@ import Dashboard from './Dashboard/Dashboard';
 import Propertypost from './Dashboard/Propertypost';
 import Allproperty from './component/Allproperties/Allproperties';
 import Editproperty from './component/Edit/Editproperty';
-// import "../src/Dashboard/";
 
 
 
@@ -18,6 +16,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+
           <Route path='/' element={<LandingPage />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Signin />} />
@@ -25,8 +24,9 @@ function App() {
           <Route path ='/edit/Property/:id' element={<Editproperty/>} />
           <Route path='/allproperties' element={<Allproperty/>} />
           <Route path='/property/:id' element={<PropertyDetails/>} />
-             <Route path='/dashboard' element={<Dashboard/>} />
-             <Route path ='/propertypost' element={<Propertypost/>} />
+          <Route path='/dashboard' element={<Dashboard/>} />
+          <Route path ='/propertypost' element={<Propertypost/>} />
+
         </Routes>
         
       </Router>

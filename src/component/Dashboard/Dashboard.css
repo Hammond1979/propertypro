@@ -1,0 +1,86 @@
+.dashboardSubheading {
+    display: flex;
+    align-items: center;
+    padding-left: 0.1875rem;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    
+}
+
+.dashboardLogo{
+    display: block;
+    font-size: 0.6875rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dashboardHeading{
+    background-color: #0a0a33;
+    width: 22%;
+    color: #fff;
+    height: 100vh;
+}
+
+.dashboardTablecontent {
+    margin-top: 4rem;
+    margin-left: 2rem;
+    line-height: 3;
+}
+
+.dashboardWrapper {
+    display: flex;
+} 
+
+.dashboardContent {
+        color: #fff;
+        width: 78%;
+        background-color: #fff;
+    }
+
+.dashboardSubcontent {
+    justify-content: space-between;
+    padding: 5rem 3rem;
+    background-color: rgb(187, 182, 182);
+}
+
+.dashboardBodyicon {
+    height: 1rem;
+}
+
+.dashboardBodyparagraph {
+    font-size: 1.5rem;
+}
+
+.dashboardBodymap{
+    height:1rem;
+}
+
+.dashboardBodyphone {
+    height:1rem; 
+}
+
+
+.dashboardSubcontent > button {
+    font-size: 1.125rem;
+    padding: 0.9375rem 6.0625rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+}
+
+.dashboardBody  {
+    color: #000;
+    font-size: 1.7rem;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 1rem;
+}
+
+.dashboardBodyenvelop {
+    height: 1rem;
+    margin-right: 0.5rem;
+}

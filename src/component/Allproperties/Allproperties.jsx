@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
 import axios from "axios";
-import "./Property.css";
+import "./Allproperties.css";
 import { setCurrentUser } from "../../slice/propertyslice";
 
 export const Propertydata = [
@@ -265,56 +265,32 @@ export const Propertydata = [
   },
 ];
 
-const url = "http://localhost:3006/v1/agent/property";
+const url = "http://localhost:3006/v1/properties";
 
-export const Property = () => {
+export const Allproperty = () => {
+  const dispatch = useDispatch();
+  const [propertydata, setProperties] = useState([]);
 
-  const navigate = useNavigate();
-
-const [agentProperty, setAgentProperty] = useState([])
-
-const getToken = JSON.parse(localStorage.getItem('data'));
-
-let config = {
-  "headers": {
-    'Authentication': getToken
-  }
-}
-
-  // const dispatch = useDispatch();
-  const [Property, setProperty] = useState([]);
-
-  const getProperty = async () => {
+  const getProperties = async () => {
     try {
-      const response = await axios.get(url, config);
+      const response = await axios.get(url);
       console.log(response.data);
-      setAgentProperty(response.data);
+      setProperties(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getProperty();
+    getProperties();
   }, []);
-
-  
-  const deleteProperty = async(userId) => {
-    const removeProperty = agentProperty.filter((property) => property.id !== userId)
-    setAgentProperty(removeProperty)
-    console.log(userId)
-    try {
-      const response = await axios.delete(`http://localhost:/v1/agent/property/${userId}`, config)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  //  dispatch(setCurrentUser({ currentUser: response.Propertydata.user }));
 
   return (
     <>
       <NavBar />
       <div className="propertyWrapper">
-        {agentProperty.map((eachProperty) => (
+        {propertydata.map((eachProperty) => (
           <div className="propertyCard" key={eachProperty.id}>
             <Link to="#" className="propertycardDetails">
               <img
@@ -322,14 +298,14 @@ let config = {
                 alt="property"
                 className="img-property"
               />
-              <p className="propertyPrice">#30,000,000</p>
+              {/* <p className="propertyPrice">#30,000,000</p> */}
             </Link>
             <div className="propertyListteam">
-              <img
+              {/* <img
                 src="images/male.jpg"
                 className="propertyImage"
                 alt="property"
-              />
+              /> */}
               <h3 className="propertyListNname">{eachProperty.name}</h3>
               <span className="text-right">{eachProperty.text}</span>
             </div>
@@ -342,16 +318,6 @@ let config = {
                 <span className="propertySale">more info</span>
               </Link>
             </span>
-            <li>
-                <span>
-                  <button onClick={()=> navigate(`/edit/Property/${eachProperty.id}`)}>Edit</button>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <button onClick={()=> deleteProperty(eachProperty.id)}>Delete</button>
-                </span>
-              </li>
             <ul className="propertyIcon">
               <li>
                 <span>
@@ -380,4 +346,4 @@ let config = {
   );
 };
 
-export default Property;
+export default Allproperty;

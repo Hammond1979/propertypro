@@ -1,0 +1,106 @@
+.propertyWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f0e3e3;
+}
+
+
+.propertyCard {
+    margin: 1rem;
+    width:22%;
+    box-shadow: 0 1rem 1.25rem 0 #000;
+    transition: 0.3s;
+}
+.propertycardDetails{
+    position: relative;
+
+}
+
+
+
+.propertycardDetails > img {
+    width:100%;
+    height:13.75rem;
+}
+
+.propertycardDetails >p {
+    position: absolute;
+    bottom: 0rem;
+    left: 1rem;
+    background: #5ea51d;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    padding: 0.1875rem 0.4375rem;
+    padding-top: 0.5rem;
+}
+
+
+
+.propertyCard:hover {
+    box-shadow: 0 0.5rem 1rem 0 #fff;
+ }
+
+.propertyName {
+    color:#000;
+    display: flex;
+    justify-content: center;
+}
+
+.propertyLocation {
+    color: #6b6565;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.propertyListNname {
+     margin-right: 1.2rem; 
+}
+
+.propertyIcon {
+display: flex;
+justify-content:space-evenly;
+color: #000;
+padding-left: 1rem;
+}
+
+.propertySale {
+    background: #5ea51d;
+    color: #fff;
+}
+
+.propertyListteam {
+    display: flex;
+    justify-content:center ; 
+    align-items: center;
+    color:#6b6565;
+    
+}
+
+.propertyImage {
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px)  {
+.propertyCard {
+    width: 85%;
+}
+
+} 
+@media screen and (max-width: 768px) and (min-width: 500px) {
+    .propertyCard{
+        width: 70%;
+    }
+
+  } 
+
+  @media screen and (max-width: 553px) and (min-width: 500px) {
+    .propertyCard {
+        width: 70%;
+    }
+
+  } 

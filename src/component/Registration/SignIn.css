@@ -20,8 +20,7 @@
       max-width: 31.25rem;
       margin: 0 auto;
       padding:1.25rem;
-      box-shadow: 0rem 0rem 1.25rem #00000010;
-      
+      box-shadow: 0rem 0rem 1.25rem #00000010; 
       border-radius:0.5rem;
       margin-bottom: 1.25rem;
   }
@@ -38,6 +37,7 @@
       padding:0.3125rem;
       font-size: 1.125rem;
       border: 0.0625rem solid #5ea51d;
+      border-radius: 0.5rem;
   }
 
   .signinsubmitBtn {
@@ -48,13 +48,13 @@
       border-radius: 0.5rem;
       }
 
-    .signinBtn{
-        width: 100%;
+    .signinBtn > a{
+      width: 100%;
       border: none;
       padding: 1.25rem;
       font-size: 1.1875rem;
       border-radius:  0.5rem;
-      color: #000;
+      color: rgb(0, 0, 0);
     }
 
   .signRecovery{

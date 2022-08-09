@@ -1,279 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
+import env from "react-dotenv";
 import axios from "axios";
 import "./Allproperties.css";
-import { setCurrentUser } from "../../slice/propertyslice";
 
-export const Propertydata = [
-  {
-    id: 1,
-    title: "bungalow",
-    image: "/images/xwork6.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
 
-  {
-    id: 2,
-    title: "bungalow",
-    image: "/images/xwork2.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 3,
-    title: "bungalow",
-    image: "/images/xwork3.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 4,
-    title: "bungalow",
-    image: "/images/xwork4.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 5,
-    title: "bungalow",
-    image: "/images/xwork5.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 6,
-    title: "duplex",
-    image: "/images/xwork9.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 7,
-    title: "duplex",
-    image: "/images/xwork10.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 8,
-    title: "duplex",
-    image: "/images/xwork8.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 9,
-    title: "bungalow",
-    image: "/images/xwork11.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 10,
-    title: "duplex",
-    image: "/images/xwork12.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 11,
-    title: "duplex",
-    image: "/images/xwork13.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 12,
-    title: "bungalow",
-    image: "/images/xwork14.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 13,
-    title: "duplex",
-    image: "/images/xwork15.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 14,
-    title: "duplex",
-    image: "/images/xwork9.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 15,
-    title: "bungalow",
-    image: "/images/xwork7.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "3",
-    square: "1,878 sqft",
-  },
-
-  {
-    id: 16,
-    title: "bungalow",
-    image: "/images/xwork6.jpg",
-    price: "#30,000,000",
-    name: "John Dorf",
-    updated: "2 weeks ago",
-    property: "Hammond Loft Property",
-    location: "Victoria Island",
-    sale: "sale",
-    more: "more info",
-    bed: "3bed",
-    bath: "2",
-    square: "1,878 sqft",
-  },
-];
-
-const url = "http://localhost:3006/v1/properties";
 
 export const Allproperty = () => {
-  const dispatch = useDispatch();
   const [propertydata, setProperties] = useState([]);
+
 
   const getProperties = async () => {
     try {
-      const response = await axios.get(url);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/properties`);
       console.log(response.data);
       setProperties(response.data);
     } catch (error) {
@@ -284,7 +25,7 @@ export const Allproperty = () => {
   useEffect(() => {
     getProperties();
   }, []);
-  //  dispatch(setCurrentUser({ currentUser: response.Propertydata.user }));
+  
 
   return (
     <>
@@ -314,7 +55,7 @@ export const Allproperty = () => {
               {" "}
               {eachProperty.address}
               <span className="propertySale">{eachProperty.sale}</span>
-              <Link to={`/property/${eachProperty.id}`}>
+              <Link to={`/allproperties/${eachProperty.id}`}>
                 <span className="propertySale">more info</span>
               </Link>
             </span>

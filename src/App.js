@@ -6,10 +6,9 @@ import Signin from './component/Registration/Signin';
 import Property from './component/Properties/Property';
 import PropertyDetails from './component/Properties/PropertyDetails';
 import Dashboard from './Dashboard/Dashboard';
-import Propertypost from './Dashboard/Propertypost';
+import Createproperty from './Dashboard/Createproperty';
 import Allproperty from './component/Allproperties/Allproperties';
 import Editproperty from './component/Edit/Editproperty';
-// import "../src/Dashboard/";
 
 
 
@@ -22,11 +21,11 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/property' element={<Property/>} />
-          <Route path ='/edit/Property/:id' element={<Editproperty/>} />
+          <Route path ='/edit/property/:id' element={<Editproperty/>} />
           <Route path='/allproperties' element={<Allproperty/>} />
           <Route path='/property/:id' element={<PropertyDetails/>} />
              <Route path='/dashboard' element={<Dashboard/>} />
-             <Route path ='/propertypost' element={<Propertypost/>} />
+             <Route path ='/propertypost' element={<Createproperty/>} />
         </Routes>
         
       </Router>

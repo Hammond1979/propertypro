@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-// import "./"
+import env from "react-dotenv";
+import swal from "sweetalert";
 import axios from "axios";
 import Selectoption from "./Selectoption";
-// import { addProperty, propertyError } from "../slice/propertyslice";
 import "./propertyProp.css";
 
-const url = "http://localhost:3006/v1/agent/properties";
 
-const Propertypost = () => {
-
+const Createproperty = () => {
+  let navigate = useNavigate ();
+  let params = useParams ();
   const getToken = JSON.parse(localStorage.getItem('data'));
 
   let config = {
@@ -44,16 +44,29 @@ console.log(config, getToken)
   };
 
   console.log(formData)
+  const check = process.env.REACT_APP_API_URL
+  console.log(`${process.env.REACT_APP_API_URL}/agent/properties`)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(url, { ...formData }, config);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/agent/properties`, { ...formData }, config);
+      swal({
+        title: "Property created",
+        icon: "success",
+        button: "okay"
+      })
+      navigate('/property');
+            swal({
+                title: `Hello, ${response.formData.user.title}`,
+                text: response.formData.message,
+                icon: "successfully created",
+                button: "Okay",
+              });
+              dispatch(setFormData({ formData: response.formData.user}))
       console.log(response);
     } catch (err) {
       console.log(err);
-      // dispatch(addProperty(formData));
-      // dispatch(propertyError({ userError: err.response.data.message}));
     }
   };
   return (
@@ -215,7 +228,8 @@ console.log(config, getToken)
                       "1",
                       "2",
                       "3",
-                      "4",
+                      "4"
+                      ,
                       "5",
                       "6",
                       "7",
@@ -259,22 +273,7 @@ console.log(config, getToken)
                 <input type="checkbox" className="check" />
               </div>
               <div className="propertypostLabel3">
-                {/* <div>
-                  <Selectoption
-                    labelName="State"
-                    value={formData.state}
-                    className="state"
-                    onChange={handleChange}
-                    data={[
-                      "Choose State",
-                      "Lagos",
-                      "Abuja",
-                      "Porthacourt",
-                      "Cross River",
-                      "Kaduna",
-                    ]}
-                  />
-                </div> */}
+
                 <div className="">
                   <label>Locality</label>
                   <input
@@ -283,7 +282,7 @@ console.log(config, getToken)
                     name="locality"
                     onChange={handleChange}
                     placeholder="locality"
-                    className="inputproperty"
+                    className="input-property"
                   />
                 </div>
                 <div>
@@ -294,7 +293,7 @@ console.log(config, getToken)
                     name="Neighbourhood"
                     onChange={handleChange}
                     placeholder="Street / Estate / Neighbourhood"
-                    className="inputproperty"
+                    className="input-property"
                   />
                 </div>
               </div>
@@ -330,5 +329,5 @@ console.log(config, getToken)
     </>
   );
 };
-// };
-export default Propertypost;
+
+export default Createproperty;

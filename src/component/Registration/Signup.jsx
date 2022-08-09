@@ -5,30 +5,36 @@ import { useDispatch } from "react-redux";
 import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import env from "react-dotenv";
 import swal from 'sweetalert';
 import axios from 'axios';
 import { setCurrentUser, signupError } from '../../slice/signupslice';
 
-const url = 'http://localhost:3006/v1/signup'
 
 const Signup = () => {
     let navigate = useNavigate ();
     const dispatch = useDispatch();
-    const [firstName,setfirstName] = useState('');
-    const [lastName,setlastName] = useState('');
-    const [email,setEmail] = useState('');
-    const [password,setPassword] = useState('');
-    const [phoneNumber,setphoneNumber] = useState('');
+
+    const defaultdata = {
+        firstName:"", 
+        lastName:"", 
+        email:"", 
+        password:"", 
+        phoneNumber:"",
+    };
     
-        const data = {firstName, lastName, email, password, phoneNumber}
-        // let collected = {
-        //     firstname: addEventListener,
-        //     lastName: onsubmit,
-        // }
+    const [data, setData] = useState(defaultdata);
+
+    const handleChange = (e) => {
+        const { value, name } = e.target;
+        setData({ ...data, [name]: value });
+      };
+        
+        
     const submitHandler = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post(url, {...data})
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {...data})
             const {createdToken} = response.data;
             console.log(createdToken)
             localStorage.setItem('data', JSON.stringify(createdToken))
@@ -44,7 +50,6 @@ const Signup = () => {
             console.log(err)
             dispatch(signupError({ userError: err.response.data.message}));
         }
-        // setfirstName(''); setlastName(''); setEmail(''); setPassword(''); setphoneNumber('')
     }
 
     return <>
@@ -54,28 +59,28 @@ const Signup = () => {
                     <h1 className="signuptitle">Register</h1>
                     <div className='formGroup'>
                         <input placeholder='firstName' htmlFor='firstName' 
-                        name='firstName' type='text' value = {firstName} 
-                        onChange= {(e) => setfirstName(e.target.value)}/>
+                        name='firstName' type='text' value = {data.firstName} 
+                        onChange= {handleChange}/>
                     </div>
                     <div className='formGroup'>
                         <input placeholder='lastName' htmlFor="lastName" 
-                        name='lastName' type='text' value = {lastName} 
-                        onChange= {(e) => setlastName(e.target.value)}/>
+                        name='lastName' type='text' value = {data.lastName} 
+                        onChange= {handleChange}/>
                     </div>
                     <div className="formGroup">
                         <input placeholder="Email" htmlFor="email" 
-                        name='email' type='email' value = {email} 
-                        onChange= {(e) => setEmail(e.target.value)}/>
+                        name='email' type='email' value = {data.email} 
+                        onChange= {handleChange}/>
                     </div>
                     <div className="formGroup">
                         <input placeholder="Password" htmlFor="password" 
-                        name='password' type='password' value = {password} 
-                        onChange= {(e) => setPassword(e.target.value)}/>
+                        name='password' type='password' value = {data.password} 
+                        onChange= {handleChange}/>
                     </div>
                     <div className="formGroup">
                         <input placeholder="phoneNumber" htmlFor="phoneNumber" 
-                        name='phoneNumber' type='phoneNumber' value = {phoneNumber } 
-                        onChange= {(e) => setphoneNumber(e.target.value)}/>
+                        name='phoneNumber' type='phoneNumber' value = {data.phoneNumber} 
+                        onChange= {handleChange}/>
                     </div>
                     <div className='agentSignin'>
                         <span ><Link to="/signin" className="agentDetail">Already An Agent? Signin</Link></span>

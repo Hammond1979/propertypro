@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Selectoption from "../../Dashboard/Selectoption";
+import env from "react-dotenv";
 import axios from "axios";
 
-const url = "http://localhost:3006/v1//property/:userId";
 
 const Editproperty = () => {
- console.log(useParams())
- const {id} = useParams()
 
- console.log(id)
+ const {id} = useParams()
  const getToken = JSON.parse(localStorage.getItem('data'));
 
  let config = {
@@ -44,7 +42,7 @@ const Editproperty = () => {
     console.log(formData)
 
     try {
-      const response = await axios.put(`http://localhost:3006/v1//property/${id}`, { ...formData }, config);
+      const response = await axios.put(`${process.env.REACT_APP_API_URL}/property/${id}`, { ...formData },config);
       console.log(response);
     } catch (err) {
         console.log(err)

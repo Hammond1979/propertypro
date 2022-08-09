@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import './Signin.css';
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
-// import Input from './Input';
+import env from "react-dotenv";
 import axios from 'axios';
 
-const url = 'http://localhost:3006/v1/login'
-
+  
 const Signin = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
@@ -17,7 +16,7 @@ const Signin = () => {
         e.preventDefault()
         try {
             console.log(data)
-            const response = await axios.post(url, {...data})
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {...data})
             console.log(response)
         } catch (err) {
             console.log(err)

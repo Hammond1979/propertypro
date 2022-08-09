@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
+import env from "react-dotenv";
 import axios from "axios";
 import "./Property.css";
 import { setCurrentUser } from "../../slice/propertyslice";
@@ -265,7 +266,7 @@ export const Propertydata = [
   },
 ];
 
-const url = "http://localhost:3006/v1/agent/property";
+
 
 export const Property = () => {
 
@@ -286,7 +287,7 @@ let config = {
 
   const getProperty = async () => {
     try {
-      const response = await axios.get(url, config);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/agent/property`, config);
       console.log(response.data);
       setAgentProperty(response.data);
     } catch (error) {
@@ -304,7 +305,7 @@ let config = {
     setAgentProperty(removeProperty)
     console.log(userId)
     try {
-      const response = await axios.delete(`http://localhost:/v1/agent/property/${userId}`, config)
+      const response = await axios.delete(`${process.env.REACT_APP_API_URL}/agent/property/${userId}`, config)
     } catch (error) {
       console.log(error)
     }

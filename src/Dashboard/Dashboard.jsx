@@ -7,7 +7,7 @@ const Dashboard = () => {
   const getToken = JSON.parse(localStorage.getItem("data"));
   const decodeToken = jwt_decode(getToken);
   const { firstName, email } = decodeToken.user;
-  console.log(decodeToken);
+  
   return (
     <>
       <div className="dashboardWrapper">

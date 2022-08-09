@@ -43,10 +43,6 @@ console.log(config, getToken)
     setFormData({ ...formData, [name]: value });
   };
 
-  console.log(formData)
-  const check = process.env.REACT_APP_API_URL
-  console.log(`${process.env.REACT_APP_API_URL}/agent/properties`)
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -57,14 +53,7 @@ console.log(config, getToken)
         button: "okay"
       })
       navigate('/property');
-            swal({
-                title: `Hello, ${response.formData.user.title}`,
-                text: response.formData.message,
-                icon: "successfully created",
-                button: "Okay",
-              });
               dispatch(setFormData({ formData: response.formData.user}))
-      console.log(response);
     } catch (err) {
       console.log(err);
     }

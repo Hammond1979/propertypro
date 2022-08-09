@@ -39,8 +39,6 @@ const Editproperty = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData)
-
     try {
       const response = await axios.put(`${process.env.REACT_APP_API_URL}/property/${id}`, { ...formData },config);
       console.log(response);
@@ -48,7 +46,6 @@ const Editproperty = () => {
         console.log(err)
     }
   };
-  console.log(formData);
 
 
   return (

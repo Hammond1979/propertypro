@@ -22,16 +22,12 @@ function App() {
           <Route path='/signin' element={<Signin />} />
           <Route path='/property' element={<Property/>} />
           <Route path ='/edit/property/:id' element={<Editproperty/>} />
-          <Route path='/allproperties' element={<Allproperty/>} />
+          <Route path='/properties' element={<Allproperty/>} />
           <Route path='/property/:id' element={<PropertyDetails/>} />
-<<<<<<< HEAD
              <Route path='/dashboard' element={<Dashboard/>} />
              <Route path ='/propertypost' element={<Createproperty/>} />
-=======
           <Route path='/dashboard' element={<Dashboard/>} />
           <Route path ='/propertypost' element={<Propertypost/>} />
-
->>>>>>> 5b7c0062d8b5ffbe826891f8893a6bab2d9bf686
         </Routes>
         
       </Router>

@@ -25,7 +25,7 @@ function App() {
           <Route path='/properties' element={<Allproperty/>} />
           <Route path='/property/:id' element={<PropertyDetails/>} />
              <Route path='/dashboard' element={<Dashboard/>} />
-             <Route path ='/propertypost' element={<Createproperty/>} />
+             <Route path ='/property-post' element={<Createproperty/>} />
           <Route path='/dashboard' element={<Dashboard/>} />
           <Route path ='/propertypost' element={<Propertypost/>} />
         </Routes>

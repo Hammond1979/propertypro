@@ -6,7 +6,7 @@ import env from "react-dotenv";
 import swal from "sweetalert";
 import axios from "axios";
 import Selectoption from "./Selectoption";
-import "./propertyProp.css";
+import "./Createproperty.css";
 
 
 const Createproperty = () => {
@@ -263,7 +263,7 @@ console.log(config, getToken)
               </div>
               <div className="propertypostLabel3">
 
-                <div className="">
+                <div>
                   <label>Locality</label>
                   <input
                     type="text"
@@ -306,7 +306,7 @@ console.log(config, getToken)
                   <input type="file" id="myFile" name="filename" />
                   <input type="submit" />
                 </div>
-                <div className="propertyButton">
+                <div   className="propertyButton">
                   {" "}
                   <button type="submit" onClick={handleSubmit}>Save</button>
                 </div>

@@ -17,7 +17,6 @@ const Signin = () => {
         try {
             console.log(data)
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {...data})
-            console.log(response)
         } catch (err) {
             console.log(err)
         }

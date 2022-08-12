@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import jwt_decode from "jwt-decode";
 
 const Dashboard = () => {
+  let navigate = useNavigate ();
   const getToken = JSON.parse(localStorage.getItem("data"));
   const decodeToken = jwt_decode(getToken);
   const { firstName, email } = decodeToken.user;
@@ -23,7 +24,7 @@ const Dashboard = () => {
           </div>
           <div className="dashboardTablecontent">
             <h3>Dashboard</h3>
-            <Link to="/propertypost">
+            <Link to="/property-post">
               <h3>Post A Property</h3>
             </Link>
             <Link to="/property">

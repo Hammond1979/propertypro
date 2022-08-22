@@ -2,7 +2,7 @@ import React from 'react';
 import LandingPage from './pages/Landing-page/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './component/Registration/Signup';
-import Signin from './component/Registration/Signin';
+import SignIn from './component/Registration/SignIn';
 import Property from './component/Properties/Property';
 import PropertyDetails from './component/Properties/PropertyDetails';
 import Dashboard from './Dashboard/Dashboard';
@@ -20,7 +20,7 @@ function App() {
 
           <Route path='/' element={<LandingPage/>} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/signin' element={<Signin />} />
+          <Route path='/signin' element={<SignIn />} />
           <Route path='/property' element={<Property/>} />
           <Route path ='/edit/property/:id' element={<Editproperty/>} />
           <Route path='/properties' element={<Allproperty/>} />

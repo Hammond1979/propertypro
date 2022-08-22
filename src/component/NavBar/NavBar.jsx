@@ -13,28 +13,25 @@ const NavBar = () => {
                     <span className='navicon'><i class="fa fa-home"></i></span>
                     <span>Oakberry <small>real estate agency</small></span>
                 </div>
-
-
                 <div className="navigate" onClick={() => { setMobile(!mobile) }}>
                     <i className="fa fa-bars"></i>
                 </div>
-
-
                 <ul className={mobile ? "nav_list_mobile" : "nav_list"}>
                     <li className='nav_content' >
                         <Link to='/'>HOME</Link>
                     </li>
-                    <li className='nav_content'>ABOUT</li>
-                    <li className='nav_content'><Link to ='/property'>PROPERTIES</Link></li>
+                    <li className='nav_content'>
+                        <a href='#about'>ABOUT</a>
+                    </li>
+                    <li className='nav_content'><Link to='/property'>PROPERTIES</Link></li>
                     <li className='nav_content'>CONTACT US</li>
-                    <li className='nav_content'>SERVICES</li>
+                    <li className='nav_content'>
+                        <a href='#services'>SERVICES</a>
+                    </li>
                 </ul>
-
-
                 <div className={mobile ? "agent-wrapper_mobile" : "agent-wrapper"}>
-                    <Link className='submit' to='/sign-up'>Submit a property</Link>
+                    <Link className='submit' to='/signup'>Submit a property</Link>
                 </div>
-
             </nav>
         </>
     )

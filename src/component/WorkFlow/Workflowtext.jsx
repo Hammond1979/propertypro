@@ -19,7 +19,7 @@ const Workflowtext = () => {
                     <div>
                         <div className='Workflow_container'>
                             <span className='work_number'>{phone.tagNumber}</span>
-                            <img src='images/blob.svg' className='workflow-image' />
+                            <img src='images/blob.svg' alt='workflow' className='workflow-image' />
                         </div>
                         <h3 className='Workflowtitle'>{phone.workFlowTitle}</h3>
                         <p className='Workflowsubtitle'>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>

@@ -12,7 +12,7 @@ const Servicedata = [
 const Services = () => {
   return (
     <>
-      <div className='service_container'>
+      <div className='service_container' id='services'>
         <div className='color'>
           <Workflow header='Service' subHeader='How it works' />
         </div>
@@ -21,7 +21,7 @@ const Services = () => {
         <div className='Workflow_wrapper'>
           {Servicedata.map((service) =>
             <div className='services'>
-              <img src={service.img} className='service_image' />
+              <img src={service.img} className='service_image' alt='service_image'/>
               <h3>{service.header}</h3>
               <p>{service.paragragh}</p>
             </div>

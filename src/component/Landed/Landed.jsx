@@ -20,7 +20,7 @@ const Landed = () => {
 
             {herosection.map((hero) =>
 
-                      <img src={hero.img} className='hero_image'/>
+                      <img src={hero.img} className='hero_image' alt='description'/>
           
      
               )}

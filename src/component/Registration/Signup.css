@@ -38,6 +38,7 @@
       padding: 0.3125rem;
       font-size: 1.125rem;
       border: 0.0625rem solid #5ea51d;
+      border-radius: 0.5rem;
   }
  
   .signinsubBtn {

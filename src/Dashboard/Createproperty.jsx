@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import env from "react-dotenv";
 import swal from "sweetalert";
 import axios from "axios";
 import Selectoption from "./Selectoption";
@@ -10,18 +9,8 @@ import "./Createproperty.css";
 
 
 const Createproperty = () => {
-  let navigate = useNavigate ();
-  let params = useParams ();
-  const getToken = JSON.parse(localStorage.getItem('data'));
 
-  let config = {
-    "headers": {
-      'Authentication': getToken
-    }
-  }
-console.log(config, getToken)
-  const dispatch = useDispatch();
-  const defaultFormData = {
+  const defaultData = {
     title: "",
     address: "",
     purpose: "",
@@ -36,24 +25,46 @@ console.log(config, getToken)
     Neighbourhood: "",
     description: "",
   };
-  const [formData, setFormData] = useState(defaultFormData);
+
+  const [file, setFile] = useState();
+  // const [propertyDetails, setPropertyDetails] = useState(defaultData);
+
+  let navigate = useNavigate ();
+  const getToken = JSON.parse(localStorage.getItem('data'));
+
+  let config = {
+    "headers": {
+      'Authentication': getToken
+    }
+  }
+console.log(config, getToken)
+  const dispatch = useDispatch();
+  
+  const [data, setData] = useState(defaultData);
+
+  const saveFile = (e) => {
+    setFile(e.target.files[0]);
+  }
 
   const handleChange = (e) => {
     const { value, name } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setData({ ...data, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/agent/properties`, { ...formData }, config);
+      const formData = new FormData();
+      formData.append("upload", file)
+      formData.append("propertyData", {...data})
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/agent/properties`, formData, config);
       swal({
         title: "Property created",
         icon: "success",
         button: "okay"
       })
       navigate('/property');
-              dispatch(setFormData({ formData: response.formData.user}))
+              dispatch(setData({ data: response.data.user}))
     } catch (err) {
       console.log(err);
     }
@@ -82,7 +93,7 @@ console.log(config, getToken)
             <Link to="/property">
               <h3>All Properties</h3>
             </Link>
-            <Link to="">
+            <Link to="/">
               <h3>Sign Out</h3>
             </Link>
           </div>
@@ -96,7 +107,7 @@ console.log(config, getToken)
               <input
                 type="text"
                 className="propertyInput "
-                value={formData.title}
+                value={data.title}
                 name="title"
                 onChange={handleChange}
                 placeholder="e.g Newly Built 4 Bedroom Duplex in a Serene Neighbourhood "
@@ -108,7 +119,7 @@ console.log(config, getToken)
               <input
                 type="text"
                 className="propertyInput "
-                value={formData.address}
+                value={data.address}
                 name="address"
                 onChange={handleChange}
                 placeholder="address "
@@ -122,14 +133,14 @@ console.log(config, getToken)
                   <Selectoption
                     name="purpose"
                     className="propertyText"
-                    value={formData.purpose}
+                    value={data.purpose}
                     onChange={handleChange}
                     data={["select", "Rent", "Sale", "Shortlet"]}
                   />
                 </div>
                 <Selectoption
                   labelName="Type of property"
-                  value={formData.propertyType}
+                  value={data.propertyType}
                   className="propertyType"
                   name="propertyType"
                   onChange={handleChange}
@@ -144,7 +155,7 @@ console.log(config, getToken)
                 />
                 <Selectoption
                   labelName="Sub type of property"
-                  value={formData.landSize}
+                  value={data.landSize}
                   name="landSize"
                   className="land"
                   onChange={handleChange}
@@ -162,7 +173,7 @@ console.log(config, getToken)
                 <div>
                   <Selectoption
                     labelName="Bedrooms"
-                    value={formData.noOfBed}
+                    value={data.noOfBed}
                     className="bedroom"
                     name="noOfBed"
                     onChange={handleChange}
@@ -185,7 +196,7 @@ console.log(config, getToken)
                 <div>
                   <Selectoption
                     labelName="Bathrooms"
-                    value={formData.noOfBath}
+                    value={data.noOfBath}
                     className="bathroom"
                     name="noOfBath"
                     onChange={handleChange}
@@ -208,7 +219,7 @@ console.log(config, getToken)
                 <div>
                   <Selectoption
                     labelName="Garages"
-                    value={formData.garages}
+                    value={data.garages}
                     className="garages"
                     name="garages"
                     onChange={handleChange}
@@ -217,8 +228,7 @@ console.log(config, getToken)
                       "1",
                       "2",
                       "3",
-                      "4"
-                      ,
+                      "4",
                       "5",
                       "6",
                       "7",
@@ -232,7 +242,7 @@ console.log(config, getToken)
                 <div>
                   <Selectoption
                     labelName="Size"
-                    value={formData.landSize}
+                    value={data.landSize}
                     className="size"
                     name="landSize"
                     onChange={handleChange}
@@ -267,7 +277,7 @@ console.log(config, getToken)
                   <label>Locality</label>
                   <input
                     type="text"
-                    value={formData.locality}
+                    value={data.locality}
                     name="locality"
                     onChange={handleChange}
                     placeholder="locality"
@@ -278,7 +288,7 @@ console.log(config, getToken)
                   <label>Street / Estate / Neighbourhood</label>
                   <input
                     type="text"
-                    value={formData.Neighbourhood}
+                    value={data.Neighbourhood}
                     name="Neighbourhood"
                     onChange={handleChange}
                     placeholder="Street / Estate / Neighbourhood"
@@ -293,7 +303,7 @@ console.log(config, getToken)
                   <textarea
                     id="desc"
                     className="propertyTextarea"
-                    value={formData.description}
+                    value={data.description}
                     name="description"
                     onChange={handleChange}
                     placeholder="Describe your property"
@@ -303,7 +313,9 @@ console.log(config, getToken)
                 </div>
                 <div className="propertyUploader">
                   <p>Click on the "Choose File" button to upload a file:</p>
-                  <input type="file" id="myFile" name="filename" />
+                  <input type="file" id="myFile" name="filename"
+                  onChange={saveFile}
+                   />
                   <input type="submit" />
                 </div>
                 <div   className="propertyButton">

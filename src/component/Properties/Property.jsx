@@ -31,7 +31,7 @@ let config = {
   const getProperty = async () => {
     try {
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/agent/property`, config);
-      console.log(response.data);
+      // console.log(response.data);
       setAgentProperty(response.data);
     } catch (error) {
       console.log(error);
@@ -74,13 +74,13 @@ let config = {
                       name='image'
                 onChange={''}/>
                     </span> */}
-              <h3 className="propertyListNname">{eachProperty.name}</h3>
+              <h3 className="propertyListName">{eachProperty.name}</h3>
               <span className="text-right">{eachProperty.text}</span>
             </div>
             <h3 className="propertyName">{eachProperty.property}</h3>
             <span class="propertyLocation">
-              {" "}
-              {eachProperty.address}
+              {/* {" "}
+              {eachProperty.address} */}
               <span className="propertySale">{eachProperty.sale}</span>
               <Link to={`/property/${eachProperty.id}`}>
                 <span className="propertySale">more info</span>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Signin.css';
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import env from "react-dotenv";
 import axios from 'axios';
+import './SignIn.css';
 
   
 const SignIn = () => {

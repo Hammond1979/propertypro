@@ -7,7 +7,7 @@ import env from "react-dotenv";
 import axios from 'axios';
 
   
-const Signin = () => {
+const SignIn = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
 
@@ -57,4 +57,4 @@ const Signin = () => {
     </>;
 };
 
-export default Signin;
+export default SignIn;

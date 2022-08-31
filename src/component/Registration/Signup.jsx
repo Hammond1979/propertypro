@@ -48,7 +48,7 @@ const Signup = () => {
               dispatch(setCurrentUser({ currentUser: response.data.user}))
         } catch (err) {
             console.log(err)
-            dispatch(signupError({ userError: err.response.data.message}));
+            // dispatch(signupError({ userError: err.response.data.message}));
         }
     }
 

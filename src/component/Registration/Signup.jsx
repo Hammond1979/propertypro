@@ -34,7 +34,7 @@ const Signup = () => {
     const submitHandler = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {...data})
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {...data});
             const {createdToken} = response.data;
             console.log(createdToken)
             localStorage.setItem('data', JSON.stringify(createdToken))

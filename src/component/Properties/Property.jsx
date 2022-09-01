@@ -21,7 +21,7 @@ const getToken = JSON.parse(localStorage.getItem('data'));
 
 let config = {
   "headers": {
-    'Authentication': getToken
+    'access_token': getToken
   }
 }
 

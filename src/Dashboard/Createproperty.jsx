@@ -34,7 +34,7 @@ const Createproperty = () => {
 
   let config = {
     "headers": {
-      'Authentication': getToken
+      'access_token': getToken
     }
   }
 console.log(config, getToken)

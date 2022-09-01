@@ -15,7 +15,7 @@ const Editproperty = () => {
 
   let config = {
     headers: {
-      Authentication: getToken,
+      access_token: getToken,
     },
   };
   const defaultFormData = {

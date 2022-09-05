@@ -23,7 +23,7 @@ const NavBar = () => {
                     <li className='nav_content'>
                         <a href='#about'>ABOUT</a>
                     </li>
-                    <li className='nav_content'><Link to='/property'>PROPERTIES</Link></li>
+                    <li className='nav_content'><Link to='/properties'>PROPERTIES</Link></li>
                     <li className='nav_content'>CONTACT US</li>
                     <li className='nav_content'>
                         <a href='#services'>SERVICES</a>

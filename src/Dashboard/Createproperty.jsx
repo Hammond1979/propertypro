@@ -37,7 +37,6 @@ const [file, setFile] = useState();
       'access_token': getToken
     }
   }
-console.log(config, getToken)
   const dispatch = useDispatch();
   
   const [data, setData] = useState(defaultData);
@@ -64,7 +63,7 @@ console.log(config, getToken)
         button: "okay"
       })
       navigate('/property');
-              dispatch(setData({ data: response.data.user}))
+             
     } catch (err) {
       console.log(err);
     }

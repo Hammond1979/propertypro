@@ -9,12 +9,12 @@ import './SignIn.css';
 
   
 const SignIn = () => {
-    let navigate = useNavigate ();
+    let navigate = useNavigate();
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
 
     const data = {email, password}
-    const submitHandler = async (e) => {
+    const submitHandler = async(e) => {
         e.preventDefault()
         try {
             console.log(data)

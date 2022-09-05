@@ -12,7 +12,7 @@ import { setCurrentUser, signupError } from '../../slice/signupslice';
 
 
 const Signup = () => {
-    let navigate = useNavigate ();
+    let navigate = useNavigate();
     const dispatch = useDispatch();
 
     const defaultdata = {

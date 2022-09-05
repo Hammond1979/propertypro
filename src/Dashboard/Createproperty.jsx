@@ -26,7 +26,7 @@ const Createproperty = () => {
     description: "",
   };
 
-  const [file, setFile] = useState();
+const [file, setFile] = useState();
   // const [propertyDetails, setPropertyDetails] = useState(defaultData);
 
   let navigate = useNavigate ();

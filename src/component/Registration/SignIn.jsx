@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
+import { useNavigate } from 'react-router-dom';
 import env from "react-dotenv";
 import axios from 'axios';
 import './SignIn.css';
 
   
 const SignIn = () => {
+    let navigate = useNavigate ();
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
 
@@ -17,6 +19,7 @@ const SignIn = () => {
         try {
             console.log(data)
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {...data})
+            navigate('/dashboard');
         } catch (err) {
             console.log(err)
         }
@@ -44,7 +47,7 @@ const SignIn = () => {
                     <div className="signinsubmitBtn">
                         <input type="checkbox" name="Remember" value="Remember" />
                         <label htmlfor="Remember Me"> Remember Me</label>
-                        <button type="submit" className="signinBtn" onClick={submitHandler}><Link to='/dashboard'>Sign in</Link></button>                
+                        <button type="submit" className="signinBtn" onClick={submitHandler}>Sign in</button>                
                     </div>
 
                     <div class="signinsubmitBtn">

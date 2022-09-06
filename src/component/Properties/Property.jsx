@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Footer from "../Footer/Footer";
-import NavBar from "../NavBar/NavBar";
+
 import env from "react-dotenv";
 import axios from "axios";
 import "./Property.css";
@@ -56,8 +56,34 @@ let config = {
 
   return (
     <>
-      <NavBar />
+      
       <div className="propertyWrapper">
+      <div className="dashboardHeading">
+          <div className="dashboardSubheading">
+            <span className="dashboardIcon">
+              <i class="fa fa-home"></i>
+            </span>
+            <span>
+              Oakberry{" "}
+              <small className="dashboardLogo">real estate agency</small>
+            </span>
+          </div>
+          <div className="dashboardTablecontent">
+            <Link to="/dashboard">
+              {" "}
+              <h3>Dashboard</h3>
+            </Link>
+            <Link to="">
+              <h3>Post A Property</h3>
+            </Link>
+            <Link to="/property">
+              <h3>All Properties</h3>
+            </Link>
+            <Link to="/">
+              <h3>Sign Out</h3>
+            </Link>
+          </div>
+        </div>
         {agentProperty.map((eachProperty) => (
           <div className="propertyCard" key={eachProperty.id}>
             <Link to="#" className="propertycardDetails">

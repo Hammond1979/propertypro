@@ -8,29 +8,30 @@ import axios from "axios";
 import "./Property.css";
 import { setCurrentUser } from "../../slice/propertyslice";
 
-
-export const Propertydata = []
+export const Propertydata = [];
 
 export const Property = () => {
-
   const navigate = useNavigate();
 
-const [agentProperty, setAgentProperty] = useState([])
+  const [agentProperty, setAgentProperty] = useState([]);
 
-const getToken = JSON.parse(localStorage.getItem('data'));
+  const getToken = JSON.parse(localStorage.getItem("data"));
 
-let config = {
-  "headers": {
-    'access_token': getToken
-  }
-}
+  let config = {
+    headers: {
+      access_token: getToken,
+    },
+  };
 
   // const dispatch = useDispatch();
   const [Property, setProperty] = useState([]);
 
   const getProperty = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/agent/property`, config);
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/agent/property`,
+        config
+      );
       // console.log(response.data);
       setAgentProperty(response.data);
     } catch (error) {
@@ -42,23 +43,26 @@ let config = {
     getProperty();
   }, []);
 
-  
-  const deleteProperty = async(userId) => {
-    const removeProperty = agentProperty.filter((property) => property.id !== userId)
-    setAgentProperty(removeProperty)
-    console.log(userId)
+  const deleteProperty = async (userId) => {
+    const removeProperty = agentProperty.filter(
+      (property) => property.id !== userId
+    );
+    setAgentProperty(removeProperty);
+    console.log(userId);
     try {
-      const response = await axios.delete(`${process.env.REACT_APP_API_URL}/agent/property/${userId}`, config)
+      const response = await axios.delete(
+        `${process.env.REACT_APP_API_URL}/agent/property/${userId}`,
+        config
+      );
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <>
-      
       <div className="propertyWrapper">
-      <div className="dashboardHeading">
+        <div className="dashboardHeading">
           <div className="dashboardSubheading">
             <span className="dashboardIcon">
               <i class="fa fa-home"></i>
@@ -95,7 +99,7 @@ let config = {
               {/* <p className="propertyPrice">#30,000,000</p> */}
             </Link>
             <div className="propertyListteam">
-            {/* <span className="profile">
+              {/* <span className="profile">
                       <input type="file"               
                       name='image'
                 onChange={''}/>
@@ -113,15 +117,21 @@ let config = {
               </Link>
             </span>
             <li>
-                <span>
-                  <button onClick={()=> navigate(`/edit/Property/${eachProperty.id}`)}>Edit</button>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <button onClick={()=> deleteProperty(eachProperty.id)}>Delete</button>
-                </span>
-              </li>
+              <span>
+                <button
+                  onClick={() => navigate(`/edit/Property/${eachProperty.id}`)}
+                >
+                  Edit
+                </button>
+              </span>
+            </li>
+            <li>
+              <span>
+                <button onClick={() => deleteProperty(eachProperty.id)}>
+                  Delete
+                </button>
+              </span>
+            </li>
             <ul className="propertyIcon">
               <li>
                 <span>

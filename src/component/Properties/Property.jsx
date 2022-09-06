@@ -2,35 +2,36 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Footer from "../Footer/Footer";
-import NavBar from "../NavBar/NavBar";
+
 import env from "react-dotenv";
 import axios from "axios";
 import "./Property.css";
 import { setCurrentUser } from "../../slice/propertyslice";
 
-
-export const Propertydata = []
+export const Propertydata = [];
 
 export const Property = () => {
-
   const navigate = useNavigate();
 
-const [agentProperty, setAgentProperty] = useState([])
+  const [agentProperty, setAgentProperty] = useState([]);
 
-const getToken = JSON.parse(localStorage.getItem('data'));
+  const getToken = JSON.parse(localStorage.getItem("data"));
 
-let config = {
-  "headers": {
-    'access_token': getToken
-  }
-}
+  let config = {
+    headers: {
+      access_token: getToken,
+    },
+  };
 
   // const dispatch = useDispatch();
   const [Property, setProperty] = useState([]);
 
   const getProperty = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/agent/property`, config);
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/agent/property`,
+        config
+      );
       // console.log(response.data);
       setAgentProperty(response.data);
     } catch (error) {
@@ -42,22 +43,51 @@ let config = {
     getProperty();
   }, []);
 
-  
-  const deleteProperty = async(userId) => {
-    const removeProperty = agentProperty.filter((property) => property.id !== userId)
-    setAgentProperty(removeProperty)
-    console.log(userId)
+  const deleteProperty = async (userId) => {
+    const removeProperty = agentProperty.filter(
+      (property) => property.id !== userId
+    );
+    setAgentProperty(removeProperty);
+    console.log(userId);
     try {
-      const response = await axios.delete(`${process.env.REACT_APP_API_URL}/agent/property/${userId}`, config)
+      const response = await axios.delete(
+        `${process.env.REACT_APP_API_URL}/agent/property/${userId}`,
+        config
+      );
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <>
-      <NavBar />
       <div className="propertyWrapper">
+        <div className="dashboardHeading">
+          <div className="dashboardSubheading">
+            <span className="dashboardIcon">
+              <i class="fa fa-home"></i>
+            </span>
+            <span>
+              Oakberry{" "}
+              <small className="dashboardLogo">real estate agency</small>
+            </span>
+          </div>
+          <div className="dashboardTablecontent">
+            <Link to="/dashboard">
+              {" "}
+              <h3>Dashboard</h3>
+            </Link>
+            <Link to="">
+              <h3>Post A Property</h3>
+            </Link>
+            <Link to="/property">
+              <h3>All Properties</h3>
+            </Link>
+            <Link to="/">
+              <h3>Sign Out</h3>
+            </Link>
+          </div>
+        </div>
         {agentProperty.map((eachProperty) => (
           <div className="propertyCard" key={eachProperty.id}>
             <Link to="#" className="propertycardDetails">
@@ -69,7 +99,7 @@ let config = {
               {/* <p className="propertyPrice">#30,000,000</p> */}
             </Link>
             <div className="propertyListteam">
-            {/* <span className="profile">
+              {/* <span className="profile">
                       <input type="file"               
                       name='image'
                 onChange={''}/>
@@ -87,15 +117,21 @@ let config = {
               </Link>
             </span>
             <li>
-                <span>
-                  <button onClick={()=> navigate(`/edit/Property/${eachProperty.id}`)}>Edit</button>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <button onClick={()=> deleteProperty(eachProperty.id)}>Delete</button>
-                </span>
-              </li>
+              <span>
+                <button
+                  onClick={() => navigate(`/edit/Property/${eachProperty.id}`)}
+                >
+                  Edit
+                </button>
+              </span>
+            </li>
+            <li>
+              <span>
+                <button onClick={() => deleteProperty(eachProperty.id)}>
+                  Delete
+                </button>
+              </span>
+            </li>
             <ul className="propertyIcon">
               <li>
                 <span>
